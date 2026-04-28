@@ -1,9 +1,9 @@
 import { whatsappLinks } from '@/lib/whatsapp';
 
 const promos = [
-  'Semana de asesoría premium',
-  'Cotizá tu mesada y recibí recomendación sin costo',
-  'Materiales premium para cocinas y baños',
+  'Asesoría profesional en minutos',
+  'Recomendación por uso real del espacio',
+  'Fabricación e instalación a medida',
 ];
 
 export function HeroPromo() {
@@ -19,8 +19,7 @@ export function HeroPromo() {
         </h1>
 
         <p className="mt-4 max-w-2xl text-pietra-black/80">
-          Mármol, granito, cuarzo y superficies especiales con asesoría,
-          fabricación e instalación profesional en Paraguay.
+          Elegí el material ideal para transformar tu espacio con asesoría profesional y trabajos a medida.
         </p>
 
         <div className="mt-6 flex flex-wrap gap-3">
@@ -32,7 +31,7 @@ export function HeroPromo() {
           </a>
 
           <a
-            className="rounded-full border border-pietra-black px-6 py-3 font-semibold text-pietra-black"
+            className="rounded-full border border-pietra-black/60 px-6 py-3 font-semibold text-pietra-black"
             href="/materiales"
           >
             Ver materiales
@@ -53,26 +52,26 @@ export function HeroPromo() {
 
       <div className="grid gap-4">
         <div
-          className="min-h-[260px] rounded-3xl border border-pietra-sand/35 bg-gradient-to-br from-pietra-green via-pietra-sand to-pietra-black"
+          className="min-h-[260px] rounded-3xl border border-pietra-sand/35"
           style={{
             backgroundImage:
-              "linear-gradient(120deg, rgba(26,26,26,0.4), rgba(26,26,26,0.1)), radial-gradient(circle at 75% 20%, rgba(255,255,255,0.2), transparent 45%), url('/banners/hero-cocina.jpg')",
+              "linear-gradient(120deg, rgba(26,26,26,0.35), rgba(26,26,26,0.08)), radial-gradient(circle at 75% 20%, rgba(255,255,255,0.2), transparent 45%), url('/banners/hero-cocina.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
 
-        <div className="rounded-2xl bg-pietra-black p-5 text-pietra-ivory">
-          <p className="text-xs uppercase tracking-[0.16em] text-pietra-sand">
-            Campaña del mes
+        <div className="rounded-2xl border border-pietra-sand/35 bg-white p-5 text-pietra-black shadow-sm">
+          <p className="text-xs uppercase tracking-[0.16em] text-pietra-green">
+            Asesoría express
           </p>
 
           <h3 className="mt-2 text-xl font-semibold">
-            Enviá medidas y recibí propuesta express
+            Enviá tus medidas y recibí propuesta por WhatsApp
           </h3>
 
           <a
-            className="mt-3 inline-block text-sm font-semibold text-pietra-sand"
+            className="mt-3 inline-block text-sm font-semibold text-pietra-green"
             href={whatsappLinks.general}
           >
             Enviar medidas →

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { MobileStickyBar } from '@/components/MobileStickyBar';
 import { ProductCard } from '@/components/ProductCard';
 import { ProjectCard } from '@/components/ProjectCard';
 import { highlightedMaterials, getMaterialBySlug } from '@/data/materials';
@@ -45,7 +44,8 @@ export default async function MaterialDetailPage({ params }: Props) {
   return (
     <main className="bg-pietra-ivory pb-20 md:pb-0">
       <section className="mx-auto max-w-7xl px-4 py-6">
-        <nav className="text-sm text-pietra-black/70">
+        <nav className="flex items-center gap-2 text-sm text-pietra-black/70">
+          <Link className="rounded-full border border-pietra-sand/50 bg-white px-3 py-1 text-xs font-semibold" href="/materiales">← Volver</Link>
           <Link href="/">Inicio</Link> /{' '}
           <Link href="/materiales">Materiales</Link> /{' '}
           <span className="font-semibold text-pietra-black">{material.name}</span>
@@ -208,7 +208,6 @@ export default async function MaterialDetailPage({ params }: Props) {
         </div>
       </section>
 
-      <MobileStickyBar />
     </main>
   );
 }
