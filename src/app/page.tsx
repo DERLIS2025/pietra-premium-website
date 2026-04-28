@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { BannerSlot } from '@/components/BannerSlot';
 import { CategoryCard } from '@/components/CategoryCard';
 import { HeroPromo } from '@/components/HeroPromo';
 import { HowItWorks } from '@/components/HowItWorks';
@@ -24,16 +23,16 @@ export default function HomePage() {
   return (
     <main className="pb-20 md:pb-0">
       <HeroPromo />
-      <BannerSlot />
 
       <section className="mx-auto mt-10 max-w-7xl px-4">
         <div className="mb-4 flex items-end justify-between gap-3">
           <div>
             <h2 className="text-2xl font-bold text-pietra-black">
-              Imaginá tu próximo espacio
+              Comprar por ambiente
             </h2>
             <p className="text-sm text-pietra-black/70">
-              Soluciones reales para cocina, baño y quincho.
+              Elegí el ambiente y descubrí materiales pensados para cada
+              espacio.
             </p>
           </div>
         </div>
@@ -45,7 +44,6 @@ export default function HomePage() {
               key={item.name}
             >
               <CategoryCard
-                caption={item.caption}
                 href={item.href}
                 image={item.image}
                 name={item.name}
