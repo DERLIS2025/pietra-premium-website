@@ -7,7 +7,9 @@ export function TrustBadges() {
         {trustBadges.map((badge) => (
           <article key={badge.title} className="rounded-xl bg-pietra-ivory p-4">
             <h3 className="font-semibold text-pietra-black">{badge.title}</h3>
-            <p className="mt-1 text-sm text-pietra-black/70">{badge.description}</p>
+            <p className="mt-1 text-sm text-pietra-black/70">
+              {badge.description}
+            </p>
           </article>
         ))}
       </div>
