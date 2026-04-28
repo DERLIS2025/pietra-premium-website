@@ -14,7 +14,7 @@ export function CategoryCard({ name, image, href, caption }: Props) {
       href={href}
     >
       <div
-        className="h-56 w-full bg-gradient-to-br from-pietra-sand via-pietra-green/80 to-pietra-black transition duration-500 group-hover:scale-105"
+        className="h-44 w-full sm:h-52 bg-gradient-to-br from-pietra-sand via-pietra-green/80 to-pietra-black transition duration-500 group-hover:scale-105"
         style={{
           backgroundImage: `linear-gradient(125deg, rgba(26,26,26,0.45), rgba(26,26,26,0.2)), radial-gradient(circle at 20% 20%, rgba(255,255,255,0.16), transparent 50%), url('${image}')`,
           backgroundSize: 'cover',

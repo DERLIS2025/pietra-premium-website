@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BannerSlot } from '@/components/BannerSlot';
 import { CategoryCard } from '@/components/CategoryCard';
 import { HeroPromo } from '@/components/HeroPromo';
 import { HowItWorks } from '@/components/HowItWorks';
@@ -23,6 +24,7 @@ export default function HomePage() {
   return (
     <main className="pb-20 md:pb-0">
       <HeroPromo />
+      <BannerSlot />
 
       <section className="mx-auto mt-10 max-w-7xl px-4">
         <div className="mb-4 flex items-end justify-between gap-3">
@@ -36,15 +38,19 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-1 md:mx-0 md:grid md:grid-cols-4 md:gap-4 md:overflow-visible md:px-0">
           {environmentCategories.map((item) => (
-            <CategoryCard
+            <div
+              className="w-[78%] shrink-0 snap-start sm:w-[55%] md:w-auto"
               key={item.name}
-              caption={item.caption}
-              href={item.href}
-              image={item.image}
-              name={item.name}
-            />
+            >
+              <CategoryCard
+                caption={item.caption}
+                href={item.href}
+                image={item.image}
+                name={item.name}
+              />
+            </div>
           ))}
         </div>
       </section>
@@ -56,7 +62,8 @@ export default function HomePage() {
               Materiales que elevan tu proyecto
             </h2>
             <p className="text-sm text-pietra-black/70">
-              Elegí el material ideal para transformar tu espacio con asesoría profesional y trabajos a medida.
+              Catálogo compacto para que compares rápido y consultes por
+              WhatsApp.
             </p>
           </div>
 
@@ -68,9 +75,12 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-2 md:gap-4 xl:grid-cols-4">
           {featuredMaterials.map((material, index) => (
-            <div className={index >= 6 ? 'hidden md:block' : ''} key={material.slug}>
+            <div
+              className={index >= 4 ? 'hidden md:block' : ''}
+              key={material.slug}
+            >
               <ProductCard material={material} />
             </div>
           ))}
@@ -96,9 +106,12 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {featuredProjects.map((project, index) => (
-            <div className={index >= 4 ? 'hidden md:block' : ''} key={project.name}>
+        <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-1 md:mx-0 md:grid md:grid-cols-2 md:gap-4 md:overflow-visible md:px-0 xl:grid-cols-3">
+          {featuredProjects.map((project) => (
+            <div
+              className="w-[85%] shrink-0 snap-start sm:w-[60%] md:w-auto"
+              key={project.name}
+            >
               <ProjectCard {...project} />
             </div>
           ))}

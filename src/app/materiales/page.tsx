@@ -45,9 +45,7 @@ export default async function MaterialesPage({ searchParams }: Props) {
           material.description,
           ...material.benefits,
           ...material.uses,
-        ]
-          .join(' ')
-          .toLowerCase();
+        ].join(' ');
 
         return normalizeText(searchableContent).includes(normalizedSearch);
       })
@@ -55,7 +53,7 @@ export default async function MaterialesPage({ searchParams }: Props) {
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-8">
-      <h1 className="text-3xl font-bold">Materiales</h1>
+      <h1 className="text-3xl font-bold text-pietra-black">Materiales</h1>
 
       <p className="mt-2 text-pietra-black/70">
         Seleccioná un material y consultá por WhatsApp para recibir asesoría
@@ -81,7 +79,7 @@ export default async function MaterialesPage({ searchParams }: Props) {
       ) : null}
 
       {filteredMaterials.length ? (
-        <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-2 md:gap-4 xl:grid-cols-4">
           {filteredMaterials.map((material) => (
             <ProductCard key={material.slug} material={material} />
           ))}
@@ -91,9 +89,12 @@ export default async function MaterialesPage({ searchParams }: Props) {
           <h2 className="text-xl font-semibold text-pietra-black">
             No encontramos materiales con ese término.
           </h2>
+
           <p className="mt-2 text-sm text-pietra-black/75">
-            Probá con “granito”, “cuarzo” o “cocina”, o escribinos por WhatsApp y te guiamos.
+            Probá con “granito”, “cuarzo” o “cocina”, o escribinos por WhatsApp
+            y te guiamos.
           </p>
+
           <a
             className="mt-4 inline-block rounded-full bg-pietra-green px-4 py-2 text-sm font-semibold text-white"
             href={whatsappLinks.general}
