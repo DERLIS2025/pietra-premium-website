@@ -7,11 +7,11 @@ export function MegaMenu() {
       <div className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-3 text-sm">
         {menuCategories.map((item) => (
           <Link
-            key={item}
-            className="whitespace-nowrap rounded-full border border-pietra-sand/50 px-3 py-1.5 transition hover:bg-pietra-green hover:text-white"
-            href="#"
+            key={item.name}
+            className="whitespace-nowrap rounded-full border border-pietra-sand/50 bg-white px-3 py-1.5 font-medium transition hover:bg-pietra-green hover:text-white"
+            href={item.href}
           >
-            {item}
+            {item.name}
           </Link>
         ))}
       </div>
