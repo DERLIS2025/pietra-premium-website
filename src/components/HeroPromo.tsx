@@ -2,6 +2,7 @@ import { whatsappLinks } from '@/lib/whatsapp';
 
 const highlights = [
   'Asesoría profesional en minutos',
+  'Recomendación por uso real del espacio',
   'Fabricación e instalación a medida',
 ];
 
@@ -18,7 +19,8 @@ export function HeroPromo() {
         </h1>
 
         <p className="mt-4 max-w-xl text-pietra-black/80">
-          Elegí el material ideal para transformar tu espacio con asesoría profesional y trabajos a medida.
+          Elegí el material ideal para transformar tu espacio con asesoría
+          profesional y trabajos a medida.
         </p>
 
         <ul className="mt-5 space-y-1.5 text-sm text-pietra-black/75">

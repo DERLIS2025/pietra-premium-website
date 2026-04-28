@@ -40,7 +40,10 @@ export default function HomePage() {
 
         <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-1 md:mx-0 md:grid md:grid-cols-4 md:gap-4 md:overflow-visible md:px-0">
           {environmentCategories.map((item) => (
-            <div className="w-[78%] shrink-0 snap-start sm:w-[55%] md:w-auto" key={item.name}>
+            <div
+              className="w-[78%] shrink-0 snap-start sm:w-[55%] md:w-auto"
+              key={item.name}
+            >
               <CategoryCard
                 caption={item.caption}
                 href={item.href}
@@ -59,7 +62,8 @@ export default function HomePage() {
               Materiales que elevan tu proyecto
             </h2>
             <p className="text-sm text-pietra-black/70">
-              Catálogo compacto para que compares rápido y consultes por WhatsApp.
+              Catálogo compacto para que compares rápido y consultes por
+              WhatsApp.
             </p>
           </div>
 
@@ -73,7 +77,10 @@ export default function HomePage() {
 
         <div className="grid grid-cols-2 gap-3 md:grid-cols-2 md:gap-4 xl:grid-cols-4">
           {featuredMaterials.map((material, index) => (
-            <div className={index >= 4 ? 'hidden md:block' : ''} key={material.slug}>
+            <div
+              className={index >= 4 ? 'hidden md:block' : ''}
+              key={material.slug}
+            >
               <ProductCard material={material} />
             </div>
           ))}
@@ -101,7 +108,10 @@ export default function HomePage() {
 
         <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-1 md:mx-0 md:grid md:grid-cols-2 md:gap-4 md:overflow-visible md:px-0 xl:grid-cols-3">
           {featuredProjects.map((project) => (
-            <div className="w-[85%] shrink-0 snap-start sm:w-[60%] md:w-auto" key={project.name}>
+            <div
+              className="w-[85%] shrink-0 snap-start sm:w-[60%] md:w-auto"
+              key={project.name}
+            >
               <ProjectCard {...project} />
             </div>
           ))}
